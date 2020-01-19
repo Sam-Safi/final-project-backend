@@ -1,6 +1,7 @@
 const express = require("express");
 const session = require("express-session");
 require("dotenv").config();
+require("./mongo");
 const app = express();
 
 const port = process.env.EXPRESS_PORT || 4000;
