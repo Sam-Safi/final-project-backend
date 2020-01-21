@@ -3,26 +3,11 @@ const Schema = mongoose.Schema;
 
 // Create Schema
 const BookSchema = new Schema({
-  name: {
-    type: String,
-    required: true
-  },
-  author: {
-    type: String,
-    required: true
-  },
-  category: {
-    type: String,
-    required: true
-  },
-  total_pages: {
-    type: Number,
-    required: false
-  },
-  user_id: {
-    type: String,
-    required: true
-  }
+  title: String,
+  author: String,
+  description: String,
+  image: String,
+  user_id: String
 });
 const Book = mongoose.model("Book", BookSchema);
 

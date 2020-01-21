@@ -1,8 +1,11 @@
 const express = require("express");
 const session = require("express-session");
-require("dotenv").config();
-require("./mongo");
 const app = express();
+const UserRouter = require("./routes/User.route");
+const BookRouter = require("./routes/Book");
+const ApiRouter = require("./routes/Api.route");
+require("./mongo");
+require("dotenv").config();
 
 const port = process.env.EXPRESS_PORT || 4000;
 
@@ -17,5 +20,9 @@ app.use(
     saveUninitialized: false
   })
 );
+
+app.use("/user", UserRouter);
+app.use("/book", BookRouter);
+app.use("api", ApiRouter);
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
