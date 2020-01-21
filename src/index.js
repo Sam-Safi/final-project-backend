@@ -25,4 +25,6 @@ app.use("/user", UserRouter);
 app.use("/book", BookRouter);
 app.use("api", ApiRouter);
 
+app.use(express.static(__dirname + "/public"));
+
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
