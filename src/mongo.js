@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const dbName = process.env.MONGO_DB || "final-project";
-mongoose.connect(`mongodb://localhost/${dbName}`, {
+const mongoURI = process.env.MONGODB_URI || `mongodb://localhost/${dbName}`;
+mongoose.connect(mongoURI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
