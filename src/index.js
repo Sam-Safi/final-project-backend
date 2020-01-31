@@ -9,7 +9,7 @@ const PrivateRouter = require("./routes/Private.route");
 require("./mongo");
 require("dotenv").config();
 
-const port = process.env.EXPRESS_PORT || 4000;
+const port = process.env.PORT || 4000;
 app.use(express.json());
 // hello world example is good to start
 // app.get("/", (req, res) => res.send("Hello World!"));
