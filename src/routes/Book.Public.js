@@ -1,6 +1,6 @@
 const express = require("express");
 const BookRouter = express.Router();
-
+const Book = require("../models/Book.model");
 // // JSON parting middleware
 // router.use(express.json());
 
