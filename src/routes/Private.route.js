@@ -25,8 +25,13 @@ PrivateRouter.post("/new", async (req, res) => {
 });
 
 PrivateRouter.put("/:id", (req, res) => {
-  Book.findByIdAndUpdate({ id: req.body.bookID });
+  BookModel.findByIdAndUpdate({ id: req.body.bookID });
   res.json({ success: true });
+});
+
+PrivateRouter.get("/:id", async (req, res) => {
+  const book = await BookModel.findById(req.params.id);
+  res.json(book);
 });
 
 PrivateRouter.delete("/:id", async (req, res) => {
