@@ -23,9 +23,8 @@ PrivateRouter.post("/new", async (req, res) => {
 
   res.json({ status: "book created", id: book.id });
 });
-
 PrivateRouter.put("/:id", (req, res) => {
-  BookModel.findByIdAndUpdate({ id: req.body.bookID });
+  BookModel.findByIdAndUpdate(req.params.id, req.body);
   res.json({ success: true });
 });
 
