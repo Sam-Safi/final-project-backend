@@ -22,7 +22,7 @@ if (!fs.existsSync(uploadFolder)) {
 }
 //upload files
 
-app.use(express.static(uploadFolder));
+app.use(express.static("upload"));
 app.use(express.static("frontend"));
 app.use(express.json());
 app.use(cors());
