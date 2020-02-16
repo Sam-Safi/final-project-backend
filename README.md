@@ -2,9 +2,9 @@
 
 ### `App Created with MERN Stack`
 
-1- React as the frontend library + ReactStrap + React Bootstrap
-2- Express.js and Node.js as the backend server
-3- MongoDB as the database
+React as the frontend library + ReactStrap + React Bootstrap
+Express.js and Node.js as the backend server
+MongoDB as the database
 
 ### `Project overview`
 
